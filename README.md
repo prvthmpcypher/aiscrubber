@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/img/Cypher_Labs- no bg.svg" alt="Cypher Labs Logo" width="80"/>
+<img src="assets/img/Cypher_Labs- no bg.png" alt="Cypher Labs Logo" width="80"/>
 
 # AiScrubber
 
