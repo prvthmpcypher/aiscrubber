@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+<!--
+=============================================================
+  AISCRUBBER — A CYPHER ECOSYSTEM INITIATIVE
+  Built by Poorvith M P (@prvthmp)
+=============================================================
+
+  Facebook  : https://www.facebook.com/profile.php?id=61588582092141
+  Instagram : https://www.instagram.com/prvthmp
+  X         : https://x.com/prvthmp
+  LinkedIn  : https://www.linkedin.com/in/prvthmp
+
+-------------------------------------------------------------
+
+  This is my first web application, built while learning
+  web development by solving real-world problems with code.
+
+  AiScrubber is part of a larger personal vision called
+  Cypher — a privacy-first product ecosystem I am slowly
+  and seriously working towards.
+
+  If you are reading this source code — hello. I built
+  this from scratch, learned as I went, and shipped it
+  anyway. That is the whole point.
+
+-------------------------------------------------------------
+  © 2026 Poorvith M P. All rights reserved.
+  A Cypher Ecosystem Initiative.
+=============================================================
+-->
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Poorvith M P" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AiScrubber--Cypher Labs</title>
+    <meta name="description" content="Absolute confidentiality for generative AI workflows." />
+    <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap');</style>
+    <link rel="icon" type="image/svg+xml" href="assets/img/Cypher_Labs- no bg.svg">
+    <link rel="apple-touch-icon" href="assets/img/Cypher.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Toast Notification Container -->
+    <div id="toastContainer" class="toast-container"></div>
+    
+    <!-- Modal Notification Container -->
+    <div id="modalContainer"></div>
+
+    <div id="pageLoader" class="page-loader">
+        <img src="assets/img/Cypher_Labs- no bg.svg" alt="" class="page-loader-logo">
+        <p>Loading secure page...</p>
+    </div>
+
+    <nav class="navbar nav-animated" aria-label="Primary navigation">
+        <div class="nav-shell">
+            <a href="index.html" class="nav-brand" aria-label="AiScrubber home">
+                <img src="assets/img/Cypher_Labs- no bg.svg" alt="Cypher Labs Logo" class="brand-logo" onerror="this.style.display='none';">
+                <span class="logo-text">AiScrubber</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link-item active">Home</a>
+                <a href="scrub.html" class="nav-link-item">Workspace</a>
+                <a href="pricing.html" class="nav-link-item">Pricing</a>
+                <a href="documentation.html" class="nav-link-item">Docs</a>
+                <a href="about.html" class="nav-link-item">About</a>
+                <a href="contact.html" class="nav-link-item">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <a href="https://github.com/prvthmpcypher" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="GitHub profile" title="GitHub">
+                    <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+                <a href="javascript:void(0)" rel="noopener noreferrer" class="nav-social-link" aria-label="Facebook username prvthmp (blocked)" title="Facebook @prvthmp" style="cursor: not-allowed; opacity: 0.68;">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-3.1 0-5 1.9-5 5v3H6v4h3v6h4v-6h3.2l.8-4h-4V9c0-.7.3-1 1-1Z"></path></svg>
+                </a>
+                <a href="https://www.instagram.com/prvthmp" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="Instagram profile" title="Instagram">
+                    <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>
+                </a>
+                <a href="https://x.com/prvthmp" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="Twitter profile" title="Twitter">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2h3.3l-7.2 8.2L23.4 22h-6.6l-5.1-6.7L5.8 22H2.5l7.7-8.8L2.1 2h6.7l4.7 6.2L18.9 2Zm-1.2 17.9h1.8L7.8 4H5.9l11.8 15.9Z"></path></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/prvthmp" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="LinkedIn profile" title="LinkedIn">
+                    <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+                <a href="scrub.html" class="nav-cta">Scrub Now!</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero hero-3d full-bleed-hero">
+        <div class="hero-background">
+            <img src="assets/img/Cypher Labs.png" alt="" class="hero-bg-image">
+            <div class="hero-grid"></div>
+            <div class="hero-light light-1"></div>
+            <div class="hero-light light-2"></div>
+        </div>
+        <div class="hero-shell">
+            <div class="hero-content fade-in-up">
+                <span class="hero-kicker">Client-side AI privacy gateway</span>
+                <h1 class="hero-title">Absolute Privacy. <br><span class="text-accent">Uncompromised AI.</span></h1>
+                <p class="hero-subtitle">A military-grade, client-side privacy scrubber. Immunize your proprietary data against leaks before interacting with public Large Language Models.</p>
+                <div class="hero-actions">
+                    <a href="scrub.html" class="btn btn-primary hero-btn scale-on-hover">Scrub Now!</a>
+                    <a href="documentation.html" class="btn btn-secondary hero-btn scale-on-hover">Read Documentation</a>
+                </div>
+            </div>
+            <div class="hero-reveal-stage" aria-hidden="true">
+                <div class="hero-device">
+                    <div class="device-topbar"><span></span><span></span><span></span></div>
+                    <div class="device-core">
+                        <img src="assets/img/Cypher_Labs- no bg.svg" alt="" class="hero-emblem" onerror="this.style.display='none';">
+                        <div class="scan-ring ring-1"></div>
+                        <div class="scan-ring ring-2"></div>
+                    </div>
+                    <div class="privacy-stream">
+                        <span>EMAIL_01 masked</span>
+                        <span>PHONE_02 tokenized</span>
+                        <span>IP vault sealed</span>
+                    </div>
+                </div>
+                <div class="hero-chip chip-a">AES</div>
+                <div class="hero-chip chip-b">Local Storage</div>
+                <div class="hero-chip chip-c">No data sent to server</div>
+            </div>
+        </div>
+        <div class="scroll-indicator" data-scroll-target="#threat-model">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><polyline points="12 3 12 15 19 8"></polyline><polyline points="12 3 12 15 5 8"></polyline></svg>
+        </div>
+    </header>
+
+    <section class="page-section ecosystem-section ecosystem-showcase" id="ecosystem">
+        <div class="section-header reveal">
+            <h2>We are Building the Cypher Ecosystem....</h2>
+            <p>It's under development, Contact for contribution  </p>
+        </div>
+        <div class="ecosystem-console">
+            <a href="#" class="ecosystem-feature flip-in">
+                <span class="ecosystem-status">In Development</span>
+                <img src="assets/img/Cypher-removebg no bg.png" alt="Cypher logo">
+                <div>
+                    <h3>Cypher</h3>
+                    <p>One privacy-first product family, built around focused work, clean operations, and safer AI usage.</p>
+                </div>
+            </a>
+            <div class="ecosystem-stack">
+                <a href="#" class="ecosystem-card flip-in">
+                    <img src="assets/img/Cypher Focus- No bg.png" alt="Cypher Focus app logo">
+                    <div><h3>Cypher Focus</h3><p>Plan deep work and reduce context switching.</p></div>
+                </a>
+                <a href="#" class="ecosystem-card flip-in">
+                    <img src="assets/img/Cypher_Mail- no bg.png" alt="Cypher Mail app logo">
+                    <div><h3>Cypher Mail</h3><p>Secure messaging concepts for private workflows.</p></div>
+                </a>
+                <a href="#" class="ecosystem-card flip-in">
+                    <img src="assets/img/Cypher_Invoice_Generator No bg.png" alt="Cypher Invoice Generator app logo">
+                    <div><h3>Invoice Generator</h3><p>Create clean invoices with Cypher tooling.</p></div>
+                </a>
+                <a href="#" class="ecosystem-card flip-in">
+                    <img src="assets/img/Cypher_Porfolio_Generator-no bg.png" alt="Cypher Portfolio Generator app logo">
+                    <div><h3>Portfolio Generator</h3><p>Shape polished portfolio pages quickly.</p></div>
+                </a>
+                <a href="#" class="ecosystem-card flip-in">
+                    <img src="assets/img/Cypher_Labs- no bg.png" alt="Cypher Labs logo">
+                    <div><h3>Cypher Labs</h3><p>The studio layer connecting the product suite.</p></div>
+                </a>
+            </div>
+        </div>
+        <div class="why-panel reveal">
+            <div>
+                <span class="hero-kicker">Why use AiScrubber</span>
+                <h3>Built for moments when a prompt could become a leak.</h3>
+            </div>
+            <div class="why-grid feature-showcase-grid">
+                <div>
+                    <img src="assets/img/regulatory.png" alt="Privacy compliance visual">
+                    <strong>Local-first privacy</strong>
+                    <span>No server round-trip for the text you paste.</span>
+                </div>
+                <div>
+                    <img src="assets/img/Cypher Focus- No bg.png" alt="Recovery workflow visual">
+                    <strong>Recoverable sessions</strong>
+                    <span>Accidental tab close recovery stays in your browser storage.</span>
+                </div>
+                <div>
+                    <img src="assets/img/Cypher_Invoice_Generator No bg.png" alt="Export document visual">
+                    <strong>Export-ready output</strong>
+                    <span>Download sanitized output and protected vaults.</span>
+                </div>
+                <div>
+                    <img src="assets/img/leagalcounsel.jpg" alt="Professional workflow visual">
+                    <strong>Professional fit</strong>
+                    <span>Useful for legal, HR, healthcare, and operations workflows.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="page-section" id="threat-model">
+        <div class="section-header reveal">
+            <h2>The Cost of Exposure</h2>
+            <p>Every unvetted prompt is a potential data breach.</p>
+        </div>
+        <div class="grid-2">
+            <div class="card risk-card slide-in-left">
+                <div class="card-image-wrapper">
+                    <img src="assets/img/esponage.jfif" alt="Corporate Espionage" class="card-img">
+                </div>
+                <h3>Corporate Espionage</h3>
+                <p>Public AI models actively train on user inputs. Submitting proprietary code, strategic roadmaps, or financial forecasting permanently surrenders your intellectual property to external servers.</p>
+            </div>
+            <div class="card risk-card slide-in-right">
+                <div class="card-image-wrapper">
+                    <img src="assets/img/regulatory.png" alt="Regulatory Catastrophe" class="card-img">
+                </div>
+                <h3>Regulatory Catastrophe</h3>
+                <p>Transmitting unencrypted patient health information (HIPAA) or attorney-client communications through unsecured AI gateways invites devastating legal penalties and reputational ruin.</p>
+            </div>
+        </div>
+
+        <div class="section-header reveal" style="margin-top: 4rem;">
+            <h2>Engineered For Professionals</h2>
+        </div>
+        <div class="grid-3">
+            <div class="card target-card flip-in">
+                <div class="card-image-wrapper">
+                    <img src="assets/img/leagalcounsel.jpg" alt="Legal Counsel" class="card-img">
+                </div>
+                <h3>Legal Counsel</h3>
+                <p>Process litigation files and highly classified NDAs with absolute cryptographic assurance.</p>
+            </div>
+            <div class="card target-card flip-in">
+                <div class="card-image-wrapper">
+                    <img src="assets/img/hr.webp" alt="HR" class="card-img">
+                </div>
+                <h3>Human Resources</h3>
+                <p>Execute performance analytics and resume parsing while strictly enforcing employee anonymity.</p>
+            </div>
+            <div class="card target-card flip-in">
+                <div class="card-image-wrapper">
+                    <img src="assets/img/healthcareadminstrtors.jfif" alt="Healthcare Administrators" class="card-img">
+                </div>
+                <h3>Healthcare Administrators</h3>
+                <p>Leverage AI for clinical charting without exposing regulated patient diagnostics to public vectors.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="assets/img/Cypher_Labs- no bg.svg" alt="Cypher Labs Logo" class="brand-logo" onerror="this.style.display='none';">
+                <h3>AiScrubber</h3>
+                <p>Architected by Cypher Labs. Zero-trust solutions for an AI-native future.</p>
+            </div>
+            <div class="footer-socials">
+                <h4>Connect with us!</h4>
+                <div class="social-icons">
+                    <a href="https://github.com/prvthmpcypher" target="_blank" aria-label="GitHub"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                    <a href="https://x.com/prvthmp" target="_blank" aria-label="Twitter"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+                    <a href="https://www.linkedin.com/in/prvthmp" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Built by Poorvith M P. A Cypher Ecosystem Initiative.</p>
+        </div>
+    </footer>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
+
+
+
