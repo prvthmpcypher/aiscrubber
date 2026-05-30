@@ -34,8 +34,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scrub| AiScrubber</title>
     <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap');</style>
-    <link rel="icon" type="image/svg+xml" href="assets/img/Cypher_Labs- no bg.svg">
-    <link rel="apple-touch-icon" href="assets/img/Cypher.png">
+    <link rel="icon" type="image/svg+xml" href="assets/img/svg/Cypher_Labs- no bg.svg">
+    <link rel="apple-touch-icon" href="assets/img/svg/Cypher_Labs- no bg.svg">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -86,7 +86,7 @@
     <main class="app-container" id="app" style="margin-top: 4rem;">
         <div class="section-header">
             <h2>Zero-Trust Local Gateway</h2>
-            <p>Your text never leaves your browser RAM.</p>
+            <p>Your text never leaves your browser storage.</p>
         </div>
 
         <div id="step-1" class="step active">
@@ -95,7 +95,7 @@
                 <textarea id="inputText" placeholder="Paste text containing sensitive emails, phone numbers, or names here..."></textarea>
                 <div class="input-actions" style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1rem;">
                     <button id="pasteBtn" class="btn btn-secondary">Paste</button>
-                    <button id="scrubBtn" class="btn btn-primary">Initialize Scrub Protocol</button>
+                    <button id="scrubBtn" class="btn btn-primary">Start scrubbing ---></button>
                 </div>
             </div>
         </div>
@@ -104,14 +104,14 @@
             <div class="glass-panel scrubber-loader-panel">
                 <div class="scrub-animation" aria-hidden="true">
                     <div class="scrub-document">
-                        <span>poorvith@example.com</span>
+                        <span>name@example.com</span>
                         <span>+1 555 013 4421</span>
-                        <span>Project: Cypher Vault</span>
+                        <span>Project: YourProject</span>
                         <span>client@company.com</span>
                     </div>
                     <div class="scrub-beam"></div>
-                    <div class="scrub-token token-one">EMAIL_01</div>
-                    <div class="scrub-token token-two">PHONE_02</div>
+                    <div class="scrub-token token-one">EMAIL-01</div>
+                    <div class="scrub-token token-two">PHONE-02</div>
                 </div>
                 <h3 id="stepLoaderMessage" class="loader-message">Scrubbing sensitive data...</h3>
                 <div class="loader-progress-bar"><div class="loader-progress-fill"></div></div>
