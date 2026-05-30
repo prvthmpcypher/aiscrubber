@@ -9,7 +9,6 @@
 *Sanitise sensitive data before it reaches any LLM — locally, instantly, for free.*
 
 [![Status](https://img.shields.io/badge/status-live-brightgreen?style=flat-square)](https://poorvith.github.io/aiscrubber)
-[![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](#license)
 [![Built With](https://img.shields.io/badge/built%20with-vanilla%20JS-yellow?style=flat-square)](#tech-stack)
 [![Zero Backend](https://img.shields.io/badge/backend-none-red?style=flat-square)](#how-it-works)
 [![Free Forever](https://img.shields.io/badge/price-free-success?style=flat-square)](#pricing)
@@ -17,7 +16,7 @@
 
 <br/>
 
-[🚀 Launch App](#) · [📖 Documentation](#) · [💬 Contact](#) · [🐛 Report Bug](../../issues)
+[🚀 Launch website](https://aiscrubber.vercel.app/) · [📖 Documentation](https://aiscrubber.vercel.app/documentation.html) · [💬 Contact](https://aiscrubber.vercel.app/contact.html) · [🐛 Report Bug](../../issues)
 
 <br/>
 
@@ -33,7 +32,7 @@ AiScrubber is a **browser-based privacy gateway** that detects and masks Persona
 
 No server. No account. No tracking. Your data never leaves your browser.
 
-Built by **Poorvith M P** as part of the [Cypher Ecosystem](#cypher-ecosystem) — a privacy-first product family currently in development.
+Built by **Poorvith M P** as part of the [Cypher Ecosystem](https://aiscrubber.vercel.app/about.html) — a privacy-first product family currently in development.
 
 ---
 
@@ -74,7 +73,7 @@ Everything happens **in your browser RAM.** Nothing is sent anywhere.
 
 > **Homepage — Hero**
 
-![Homepage](assets/img/Cypher%20Labs.png)
+![Homepage]()
 
 > **Scrub Workspace**
 
@@ -82,7 +81,7 @@ Everything happens **in your browser RAM.** Nothing is sent anywhere.
 
 > **Cypher Ecosystem Overview**
 
-![Ecosystem](assets/img/Cypher_Labs-%20no%20bg.png)
+![Ecosystem]()
 
 ---
 
@@ -106,7 +105,7 @@ Everything happens **in your browser RAM.** Nothing is sent anywhere.
 No installation needed. It's a static web app.
 
 **Option 1 — Use it live:**
-👉 [Launch AiScrubber](#)
+👉 [Launch AiScrubber](https://aiscrubber.vercel.app/)
 
 **Option 2 — Run locally:**
 ```bash
