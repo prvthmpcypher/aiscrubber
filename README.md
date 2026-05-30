@@ -72,16 +72,11 @@ Everything happens **in your browser RAM.** Nothing is sent anywhere.
 ## 🖥️ Screenshots
 
 > **Homepage — Hero**
-
-![Homepage]()
+![Homepage](assets/img/homepage-preview.png)
 
 > **Scrub Workspace**
-
 *Paste → Scrub → Export*
-
-> **Cypher Ecosystem Overview**
-
-![Ecosystem]()
+![Ecosystem](assets/img/workspace-preview.png)
 
 ---
 
