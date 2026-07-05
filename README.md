@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/img/brand-logo.svg" alt="AiScrubber logo" width="80"/>
+<img src="assets/img/aiscrubber-logo" alt="AiScrubber logo" width="80"/>
 
 # AiScrubber
 
