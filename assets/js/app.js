@@ -1,4 +1,4 @@
-﻿/*
+/*
 =============================================================
   AISCRUBBER — A CYPHER ECOSYSTEM INITIATIVE
   Built by Poorvith M P (@prvthmp)
@@ -155,8 +155,6 @@ document.addEventListener('DOMContentLoaded', () => {
         row.className = 'social-icons';
         if (!socials.contains(row)) socials.appendChild(row);
         const socialLinks = [
-            ['javascript:void(0)', 'Facebook (prvthmp - blocked)', '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-3.1 0-5 1.9-5 5v3H6v4h3v6h4v-6h3.2l.8-4h-4V9c0-.7.3-1 1-1Z"></path></svg>'],
-            ['https://www.instagram.com/prvthmp', 'Instagram', '<svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>'],
             ['https://x.com/prvthmp', 'X', '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2h3.3l-7.2 8.2L23.4 22h-6.6l-5.1-6.7L5.8 22H2.5l7.7-8.8L2.1 2h6.7l4.7 6.2L18.9 2Zm-1.2 17.9h1.8L7.8 4H5.9l11.8 15.9Z"></path></svg>'],
             ['https://www.linkedin.com/in/prvthmp', 'LinkedIn', '<svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>'],
             ['https://github.com/prvthmpcypher', 'GitHub', '<svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>']
@@ -186,13 +184,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ensureLegalFooter();
 
-    // Show a small explanatory modal when users click the frozen Facebook links
-    document.querySelectorAll('a[aria-label*="Facebook"]').forEach(a => {
-        a.addEventListener('click', (e) => {
-            e.preventDefault();
-            showModal('Facebook Link Blocked', 'This Facebook profile is frozen and cannot be opened from AiScrubber.\n\nUsername: prvthmp\n\nIf you need to contact the project owner, use the other profile links (GitHub, X, LinkedIn).');
-        });
-    });
 
     // Smooth scroll anchors and indicators
     document.querySelectorAll('.scroll-indicator, a[href^="#"]').forEach(link => {
