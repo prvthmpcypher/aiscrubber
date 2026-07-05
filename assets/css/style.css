@@ -1,34 +1,4 @@
-﻿/*
-=============================================================
-  AISCRUBBER — A CYPHER ECOSYSTEM INITIATIVE
-  Built by Poorvith M P (@prvthmp)
-=============================================================
-
-  Facebook  : https://www.facebook.com/profile.php?id=61588582092141
-  Instagram : https://www.instagram.com/prvthmp
-  X         : https://x.com/prvthmp
-  LinkedIn  : https://www.linkedin.com/in/prvthmp
-
--------------------------------------------------------------
-
-  This is my first web application, built while learning
-  web development by solving real-world problems with code.
-
-  AiScrubber is part of a larger personal vision called
-  Cypher — a privacy-first product ecosystem I am slowly
-  and seriously working towards.
-
-  If you are reading this source code — hello. I built
-  this from scratch, learned as I went, and shipped it
-  anyway. That is the whole point.
-
--------------------------------------------------------------
-  © 2026 Poorvith M P. All rights reserved.
-  A Cypher Ecosystem Initiative.
-=============================================================
-*/
-
-/* â”€â”€â”€ Base Cypher Tokens â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+﻿/* â”€â”€â”€ Base Cypher Tokens â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 :root {
   --cypher-font-sans: 'Inter', sans-serif;
   --cypher-font-mono: 'JetBrains Mono', monospace;
@@ -1651,14 +1621,12 @@ a,
 .ecosystem-stack {
     display: grid;
     gap: 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .ecosystem-stack .ecosystem-card {
     min-height: 0;
-    display: grid;
-    grid-template-columns: 82px minmax(0, 1fr);
-    align-items: center;
-    gap: 1rem;
+    display: block;
     padding: 1rem;
     border-radius: var(--radius);
 }
